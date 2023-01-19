@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3399da"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -20,37 +19,35 @@
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintGuide_percent="0.15"
         android:orientation="horizontal"
-        />
+        app:layout_constraintGuide_percent="0.15" />
+<FrameLayout
+    android:id="@+id/game_field"
+    android:layout_width="match_parent"
+    app:layout_constraintTop_toTopOf="@id/guideline"
+    app:layout_constraintBottom_toBottomOf="@id/guideline_at_the_middle"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_height="match_parent">
+
+</FrameLayout>
     <ImageButton
         android:id="@+id/pig_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
+
+        android:background="#3399da"
+        android:src="@drawable/pig"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline"
-android:src = "@drawable/pig"
-        android:background="#3399da"
-        />
-    <ImageButton
-        android:id="@+id/croc_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_at_the_middle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline"
-        android:src = "@drawable/crocodile"
-        android:background="#3399da"
-        />
+        app:layout_constraintTop_toTopOf="@id/guideline" />
+
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_at_the_middle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintGuide_percent="0.7"
         android:orientation="horizontal"
-        />
+        app:layout_constraintGuide_percent="0.7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
